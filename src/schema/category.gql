@@ -1,0 +1,22 @@
+type Query{
+    Categories:[Category]
+    category(id:Int!):Category
+}
+type Mutation{
+    CreateCategory(input:CategoryInput):Boolean
+    UpdateCategory(id:Int!,input:CategoryInput):Boolean
+    RemoveCategory(id:Int!):Boolean
+}
+type Category{
+    id:Int
+    category_name:String
+    updated_at:String
+    created_at:String
+
+}
+input CategoryInput{
+    id:Int
+    category_name:String
+    updated_at:String
+    created_at:String
+}
